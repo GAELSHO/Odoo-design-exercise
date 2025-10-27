@@ -1,3 +1,4 @@
+
 /* ======= HERO / NAV EXPORT BASE (Anima + ajustes) ======= */
 .desktop {
   background-color: #ffffff;
@@ -331,4 +332,3 @@
   .footer-bottom{ flex-direction:column; align-items:flex-start; gap:8px; }
   .footer-grid{ grid-template-columns: 1fr; }
 }
-
