@@ -31,8 +31,9 @@
 .desktop .frame {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 183px;
+  justify-content: space-between;
+  width: 1201px; /* match the length of the nav line */
+  gap: 0;
   position: absolute;
   top: 41px; left: 140px;
 }
@@ -54,13 +55,13 @@
 .desktop .text-wrapper-3 { font-weight: 600; color: #002d55; font-size: 12px; }
 
 /* TARJETA BLANCA (shell) + TARJETA MORADA */
-.desktop .frame-wrapper { position: absolute; top: 162px; left: 846px; width: 334px; height: 435px; display: flex; }
+.desktop .frame-wrapper { position: absolute; top: 162px; left: 1007px; width: 334px; height: 435px; display: flex; }
 .desktop .frame-3 {
   display: flex; width: 334px; height: 435px; position: relative;
   flex-direction: column; align-items: center; justify-content: center; gap: 19px;
   padding: 36px 16px 36px; background-color: #fff;
   border-radius: 10px 10px 54px 10px;
-  box-shadow: 0 1.25rem 2.5rem rgba(16,24,40,.12);
+  box-shadow: var(--shadow-soft);
 }
 .desktop .frame-4 { display: flex; flex-direction: column; width: 268px; gap: 22px; }
 .desktop .frame-5 { display: flex; align-items: center; justify-content: space-between; width: 100%; }
@@ -146,13 +147,13 @@
 .awards-grid { display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:16px; }
 .award {
   display:flex; align-items:center; gap:12px; background:#fff; border-radius:16px; padding:14px 16px;
-  text-decoration:none; color:#182230; box-shadow: 0 1px 0 rgba(16,24,40,.08);
+  text-decoration:none; color:#182230; box-shadow: var(--shadow-soft);
   transition: transform .2s ease, box-shadow .2s ease;
   cursor: pointer;
 }
 .award:hover, .award:focus-visible {
   transform: translateY(-6px);
-  box-shadow: 0 1rem 2rem rgba(16,24,40,.12);
+  box-shadow: var(--shadow-hover);
   outline: none;
 }
 .award-title { font-weight:600; }
@@ -167,7 +168,7 @@
 /* ===== FAQ (Accordion) ===== */
 .faq { padding:72px 0; }
 .accordion { width:min(800px, 100%); margin: 24px auto 0; }
-.accordion-item { background:#fff; border-radius:12px; box-shadow:0 1px 0 rgba(16,24,40,.08); overflow:hidden; margin-bottom:12px; }
+.accordion-item { background:#fff; border-radius:12px; box-shadow:var(--shadow-soft); overflow:hidden; margin-bottom:12px; }
 .accordion-trigger {
   width:100%; text-align:left; background:#fff; border:0; padding:16px 18px; display:flex; justify-content:space-between; align-items:center;
   font-weight:600; cursor:pointer;
@@ -197,8 +198,11 @@
 .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:center; }
 .image-frame, .image-stack { position: relative; }
 .img-cover { width:100%; height:auto; display:block; }
+.img-cover{ box-shadow: var(--shadow-soft); }
+/* Ensure the Install section image (img_03) shows a visible shadow */
+#install .img-cover{ box-shadow: var(--shadow-card); }
 .overflow { overflow:hidden; }
-.shadow { box-shadow: 0 1rem 2rem rgba(16,24,40,.12); }
+.shadow { box-shadow: var(--shadow-soft); }
 .rounded-xl { border-radius: 24px; }
 .rounded-lg { border-radius: 16px; }
 .mt-12{ margin-top:12px; }
@@ -243,9 +247,9 @@
 .right-stack{ grid-column: 2; grid-row: 1 / span 2; display:flex; flex-direction:column; gap:8px; }
 .tech-cards .tcard{ min-height:0; }
 .tcard.portrait{ min-height:300px; }
-.tcard{ background:#fff; }
+.tcard{ background:#fff; box-shadow: var(--shadow-soft); }
 .tcard.portrait{ grid-row: auto; }
-.tcard-img{ width:100%; height:auto; object-fit:contain; background:#f8fafc; display:block; border-top-left-radius:24px; border-top-right-radius:24px; }
+.tcard-img{ width:100%; height:auto; object-fit:contain; background:#f8fafc; display:block; border-top-left-radius:24px; border-top-right-radius:24px; box-shadow: none; }
 .tcard.portrait .tcard-img{ height:220px; object-fit:cover; }
 .tcard-body{ padding:14px 16px; }
 .tcard-body.center{ text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; padding:14px 12px; }
