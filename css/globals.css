@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -22,6 +21,11 @@ body {
   --dark: #0b0f2b;
   --card-purple: #1f1247;
   --white: #fff;
+  /* Shadow tokens (homogeneous across cards/images) */
+  /* Softer, more diffuse shadows */
+  --shadow-card: 0 1px 3px rgba(16,24,40,.05), 0 8px 16px rgba(16,24,40,.10);
+  --shadow-hover: 0 2px 6px rgba(16,24,40,.06), 0 12px 24px rgba(16,24,40,.12);
+  --shadow-soft: 0 1px 3px rgba(16,24,40,.05);
 }
 
 /* Utilidades generadas (como de SCSS maps compilados) */
